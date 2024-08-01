@@ -19,3 +19,13 @@
   font-weight: 900;
   font-size: 1.5rem;
 }
+
+.single-product__container .btn-add-to-cart {
+  padding: 0.9rem;
+  background-color: #111827;
+  border: none;
+  margin-top: 0.9rem;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 900;
+}
