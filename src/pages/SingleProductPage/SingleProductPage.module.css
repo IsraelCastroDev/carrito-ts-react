@@ -1,0 +1,21 @@
+.single-product__container {
+  display: flex;
+  gap: 4rem;
+}
+
+.single-product__container img {
+  display: block;
+  height: 30rem;
+  width: 30rem;
+}
+
+.single-product__container .single-product__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-wrap: pretty;
+}
+
+.single-product__container .single-product__price {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
