@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useAppStore } from "../../store/useAppStore";
 import styles from "./HomePage.module.css";
-import { Link } from "react-router-dom";
+import ProductCard from "../../components/ProductCard";
 
 function HomePage() {
   const products = useAppStore((state) => state.products);
@@ -10,14 +10,7 @@ function HomePage() {
     <>
       <ul className={styles.products}>
         {hasProducts ? (
-          products.map((product) => (
-            <li key={product.id}>
-              <Link to={`/productos/${product.id}`}>
-                <img src={product.image} alt={`Image of ${product.title}`} />
-              </Link>
-              <h3 title={product.title}>{product.title}</h3>
-            </li>
-          ))
+          products.map((product) => <ProductCard product={product} />)
         ) : (
           <p>No hay productos</p>
         )}
