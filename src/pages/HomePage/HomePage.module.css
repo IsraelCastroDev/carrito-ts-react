@@ -27,3 +27,22 @@
 .products h3 {
   font-size: 1rem;
 }
+
+.products-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.products-info button {
+  border: none;
+  background-color: #111827;
+  color: #eee9e9;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
