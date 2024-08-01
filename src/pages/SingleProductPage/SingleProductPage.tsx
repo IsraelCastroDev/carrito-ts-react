@@ -3,6 +3,7 @@ import style from "./SingleProductPage.module.css";
 import { useParams } from "react-router-dom";
 import { useAppStore } from "../../store/useAppStore";
 import { formatCurrency } from "../../helpers";
+import { usePersistedStore } from "../../store/usePersistedStore";
 
 function SingleProductPage() {
   const { productId } = useParams();
@@ -11,6 +12,7 @@ function SingleProductPage() {
     (state) => state.clearStateSingleProduct
   );
   const singleProduct = useAppStore((state) => state.singleProduct);
+  const addToCart = usePersistedStore((state) => state.addToCart);
 
   useEffect(() => {
     if (productId !== undefined) {
@@ -47,6 +49,13 @@ function SingleProductPage() {
                 : "Precio no disponible"}
             </p>
             <p>{singleProduct?.description || "Descripción no disponible"}</p>
+
+            <button
+              onClick={() => addToCart(singleProduct)}
+              className={style["btn-add-to-cart"]}
+            >
+              Agregar al Carrito
+            </button>
           </div>
         </>
       )}
