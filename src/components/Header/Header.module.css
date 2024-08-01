@@ -4,4 +4,28 @@
   background-color: rgb(219, 219, 233);
   color: #213547;
   padding: 0.8rem 2rem;
+
+  position: sticky;
+  top: 0;
+}
+
+.header-cart {
+  position: relative;
+  display: inline-block; /* Asegura que el contenedor sea del tamaño del icono */
+}
+
+.header-cart .header-cart__length {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra el span exactamente en el centro */
+  background-color: #c43838; /* Color de fondo para destacar el número */
+  color: white; /* Color del texto */
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%; /* Hacer que el span tenga forma de círculo */
+  font-size: 0.75rem; /* Ajusta el tamaño de la fuente */
+  line-height: 1; /* Asegura que el texto esté centrado verticalmente */
 }
