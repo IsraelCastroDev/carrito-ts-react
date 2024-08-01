@@ -11,3 +11,4 @@ export const ProductAPIResponse = z.object({
 export const ProductsAPIResponse = z.array(ProductAPIResponse);
 
 export type Product = z.infer<typeof ProductAPIResponse>;
+export type ProductCart = Product & { quantity: number };
