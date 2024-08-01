@@ -4,6 +4,7 @@ import { Product, ProductCart } from "../../schemas";
 export type CartSliceType = {
   cart: ProductCart[];
   addToCart: (product: Product) => void;
+  deleteProduct: (productId: Product["id"]) => void;
 };
 
 export const createCartSlice: StateCreator<CartSliceType> = (set, get) => ({
@@ -27,5 +28,9 @@ export const createCartSlice: StateCreator<CartSliceType> = (set, get) => ({
         cart: [...get().cart, newProductCart],
       });
     }
+  },
+  deleteProduct: (id) => {
+    const newCart = get().cart.filter((item) => item.id !== id);
+    set({ cart: newCart });
   },
 });
