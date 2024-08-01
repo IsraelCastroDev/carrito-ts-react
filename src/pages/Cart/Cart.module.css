@@ -1,0 +1,61 @@
+.cart-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.cart-container .resume {
+  background-color: #fff;
+  padding: 1rem;
+  width: 30%;
+  color: #111827;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container .resume .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.9rem;
+}
+.cart-container .resume .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #111827;
+  margin-top: 0.3rem;
+}
+
+.cart-container .resume button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #111827;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.cart-container .cart {
+  width: 70%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.cart-item .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+}
